@@ -41,6 +41,7 @@ public class CalcController {
                 insertOperator(buttonText);
                 break;
             case("DEL"):
+            case("C"):
 
 
         }
