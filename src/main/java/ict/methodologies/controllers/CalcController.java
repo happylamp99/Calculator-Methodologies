@@ -16,6 +16,7 @@ public class CalcController {
         expression.setText(expression.getText()+ " " + operator + " ");
     }
 
+    public void clearExpression() { expression.setText(""); }
 
     public void onMouseClick(MouseEvent mouseEvent){
         Button button = (Button) mouseEvent.getSource();
@@ -40,7 +41,9 @@ public class CalcController {
             case("*"):
                 insertOperator(buttonText);
                 break;
-            case("DEL"):
+            case("C"):
+                clearExpression();
+                break;
 
 
         }

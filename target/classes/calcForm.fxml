@@ -81,7 +81,7 @@
                 <font>
                     <Font size="26.0" />
                 </font></Button>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="C" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#onMouseClick" text="C" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                 <font>
                     <Font size="26.0" />
                 </font></Button>
