@@ -1,4 +1,5 @@
 package ict.methodologies.controllers;
+import ict.methodologies.utils.EvaluateString;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -7,6 +8,9 @@ import javafx.scene.input.MouseEvent;
 public class CalcController {
     @FXML
     private Label expression;
+
+    @FXML
+    private Label result;
 
     public void insertNumber(String number){
         expression.setText(expression.getText() + number);
@@ -17,6 +21,14 @@ public class CalcController {
     }
 
     public void clearExpression() { expression.setText(""); }
+
+    public Label getExpression() {
+        return expression;
+    }
+
+    public  void setResult(String newResult){
+        this.result.setText("= " + newResult);
+    }
 
     public void onMouseClick(MouseEvent mouseEvent){
         Button button = (Button) mouseEvent.getSource();
@@ -44,6 +56,12 @@ public class CalcController {
             case("C"):
                 clearExpression();
                 break;
+            case("="):
+                 double result = EvaluateString.evaluate( this.getExpression().getText());
+                 setResult(String.valueOf(result));
+                 break;
+
+
 
 
         }
