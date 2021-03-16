@@ -26,6 +26,14 @@ public class CalcController {
         return expression;
     }
 
+    public void deleteLast(){
+        if (!getExpression().getText().isEmpty()){
+            StringBuilder text = new StringBuilder(getExpression().getText());
+            text.deleteCharAt(text.length() - 1);
+            getExpression().setText(text.toString());
+        }
+    }
+
     public  void setResult(String newResult){
         this.result.setText("= " + newResult);
     }
@@ -60,6 +68,10 @@ public class CalcController {
                  double result = EvaluateString.evaluate( this.getExpression().getText());
                  setResult(String.valueOf(result));
                  break;
+            case("Del"):
+                deleteLast();
+                break;
+
 
 
 
