@@ -37,7 +37,7 @@ public class CalcController {
     }
 
     public void insertAnswer(String answer){
-        expression.setText(expression.getText()+ " " + answer);
+        expression.setText(expression.getText() + answer);
     }
     public void deleteLast(){
         if (!getExpression().getText().isEmpty()){
@@ -98,7 +98,7 @@ public class CalcController {
                 clearExpression();
                 break;
             case("="):
-                 double result = EvaluateString.evaluate( this.getExpression().getText());
+                 int result = EvaluateString.evaluate( this.getExpression().getText());
                  addCalculation(this.getExpression().getText(),String .valueOf(result));
                  setResult(String.valueOf(result));
                  break;
